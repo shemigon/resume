@@ -1,0 +1,10 @@
+<section>
+  <h1>Summary</h1>
+
+  <ul>
+    <li *ngFor="let item of items">
+      <span class="year" *ngIf="item.year">{{ item.year }} </span>
+      <span class="title">{{ item.title }}</span>
+    </li>
+  </ul>
+</section>

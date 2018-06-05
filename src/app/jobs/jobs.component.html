@@ -1,0 +1,19 @@
+<h1>Experience</h1>
+<div *ngFor="let item of items">
+  <div class="headline">
+    <div class="company">{{ item.company }}</div>
+    <div class="role">{{ item.role }}</div>
+    <div class="place">{{ item.place }}</div>
+    <div class="time">{{ item.time.begin }} &mdash;
+      <span *ngIf="item.time.end">{{ item.time.end }}</span>
+      <span *ngIf="!item.time.end">present</span>
+    </div>
+  </div>
+  <div class="description">
+    <p>{{ item.description.text }}</p>
+    <ul *ngIf="item.description.achievements">
+      <li *ngFor="let a of item.description.achievements">{{ a }}</li>
+    </ul>
+    <p *ngIf="item.description.notes">{{ item.description.notes }}</p>
+  </div>
+</div>
