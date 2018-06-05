@@ -1,16 +1,20 @@
-import { Component } from '@angular/core';
-import { DataService } from "../data.service";
+import { Component, Input, OnInit } from '@angular/core';
+import { Resume } from "../types";
 
 @Component({
   selector: 'resume-education',
   templateUrl: './education.component.html',
   styleUrls: ['./education.component.less']
 })
-export class EducationComponent {
+export class EducationComponent implements OnInit {
+  @Input() resume: Resume;
+
   public items: string[];
 
-  constructor(private data: DataService) {
-    this.items = data.education;
+  constructor() {}
+
+  ngOnInit(): void {
+    this.items = this.resume.education;
   }
 
 

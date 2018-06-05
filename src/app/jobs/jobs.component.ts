@@ -1,16 +1,20 @@
-import { Component } from '@angular/core';
-import { DataService, IJob } from "../data.service";
+import { Component, Input, OnInit } from '@angular/core';
+import { Job, Resume } from "../types";
 
 @Component({
   selector: 'resume-jobs',
   templateUrl: './jobs.component.html',
   styleUrls: ['./jobs.component.less']
 })
-export class JobsComponent {
-  public items: IJob[];
+export class JobsComponent implements OnInit {
+  @Input() resume: Resume;
 
-  constructor(private data: DataService) {
-    this.items = data.jobs;
+  public items: Job[];
+
+  constructor() {}
+
+  ngOnInit(): void {
+    this.items = this.resume.jobs;
   }
 
 }

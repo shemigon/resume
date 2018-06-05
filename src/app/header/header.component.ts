@@ -1,20 +1,24 @@
-import { Component } from '@angular/core';
-import { DataService } from "../data.service";
+import { Component, Input, OnInit } from '@angular/core';
+import { Resume } from "../types";
 
 @Component({
   selector: 'resume-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.less']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+  @Input() resume: Resume;
+
   public name: string;
   public email: string;
   public phone: string;
 
-  constructor(private data: DataService) {
-    this.name = data.personalInfo.name;
-    this.email = data.personalInfo.email;
-    this.phone = data.personalInfo.phone;
+  constructor() {}
+
+  ngOnInit() {
+    this.name = this.resume.personalInfo.name;
+    this.email = this.resume.personalInfo.email;
+    this.phone = this.resume.personalInfo.phone;
   }
 
 }

@@ -1,17 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { DataService } from "../data.service";
+import { Component, Input, OnInit } from '@angular/core';
+import { Resume } from "../types";
 
 @Component({
   selector: 'resume-summary',
   templateUrl: './summary.component.html',
   styleUrls: ['./summary.component.less']
 })
-export class SummaryComponent {
+export class SummaryComponent implements OnInit {
+  @Input() resume: Resume;
+
   public items;
 
-  constructor(private data: DataService) {
+  constructor() {}
+
+  ngOnInit(): void {
     let year = (new Date()).getFullYear();
-    this.items = data.summary.map(function (i) {
+    this.items = this.resume.summary.map(function (i) {
       if (i.year) {
         i.year = year - i.year;
       }

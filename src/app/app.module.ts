@@ -8,6 +8,11 @@ import { SpecialtiesComponent } from './specialties/specialties.component';
 import { JobsComponent } from './jobs/jobs.component';
 import { PastexpComponent } from './pastexp/pastexp.component';
 import { EducationComponent } from './education/education.component';
+import { RouterModule } from "@angular/router";
+import { DataResolver } from "./data.resolver";
+import { HttpClientModule } from "@angular/common/http";
+import { DataService } from "./data.service";
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +22,27 @@ import { EducationComponent } from './education/education.component';
     SpecialtiesComponent,
     JobsComponent,
     PastexpComponent,
-    EducationComponent
+    EducationComponent,
+    MainComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    RouterModule.forRoot([
+      {
+        path: '',
+        component: MainComponent,
+        resolve: {
+          resume: DataResolver,
+        }
+      }
+    ])
+
   ],
-  providers: [],
+  providers: [
+    DataService,
+    DataResolver,
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

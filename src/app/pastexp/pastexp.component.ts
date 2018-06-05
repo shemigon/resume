@@ -1,16 +1,20 @@
-import { Component } from '@angular/core';
-import { DataService, IPastExperience } from "../data.service";
+import { Component, Input, OnInit } from '@angular/core';
+import { PastExperience, Resume } from "../types";
 
 @Component({
   selector: 'resume-pastexp',
   templateUrl: './pastexp.component.html',
   styleUrls: ['./pastexp.component.less']
 })
-export class PastexpComponent {
-  public info: IPastExperience;
+export class PastexpComponent implements OnInit {
+  @Input() resume: Resume;
 
-  constructor(private data: DataService) {
-    this.info = data.pastExperience;
+  public info: PastExperience;
+
+  constructor() {}
+
+  ngOnInit(): void {
+    this.info = this.resume.pastExperience;
   }
 
 
