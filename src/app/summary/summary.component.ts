@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Resume } from "../types";
+import { SummaryItem } from "../types";
 
 @Component({
   selector: 'resume-summary',
@@ -7,7 +7,7 @@ import { Resume } from "../types";
   styleUrls: ['./summary.component.less']
 })
 export class SummaryComponent implements OnInit {
-  @Input() resume: Resume;
+  @Input() summary: SummaryItem[];
 
   public items;
 
@@ -15,7 +15,7 @@ export class SummaryComponent implements OnInit {
 
   ngOnInit(): void {
     let year = (new Date()).getFullYear();
-    this.items = this.resume.summary.map(function (i) {
+    this.items = this.summary.map(function (i) {
       if (i.year) {
         i.year = year - i.year;
       }

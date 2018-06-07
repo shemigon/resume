@@ -1,21 +1,13 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { PastExperience, Resume } from "../types";
+import { Component, Input } from '@angular/core';
+import { PastExperience } from "../types";
 
 @Component({
   selector: 'resume-pastexp',
   templateUrl: './pastexp.component.html',
   styleUrls: ['./pastexp.component.less']
 })
-export class PastexpComponent implements OnInit {
-  @Input() resume: Resume;
-
-  public info: PastExperience;
+export class PastexpComponent {
+  @Input() info: PastExperience;
 
   constructor() {}
-
-  ngOnInit(): void {
-    this.info = this.resume.pastExperience;
-  }
-
-
 }

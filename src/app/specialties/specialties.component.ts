@@ -1,20 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Resume } from "../types";
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'resume-specialties',
   templateUrl: './specialties.component.html',
   styleUrls: ['./specialties.component.less']
 })
-export class SpecialtiesComponent implements OnInit {
-  @Input() resume: Resume;
-
-  public items: string[][];
+export class SpecialtiesComponent {
+  @Input() items: string[][];
 
   constructor() {}
-
-  ngOnInit(): void {
-    this.items = this.resume.specialties;
-  }
-
 }
