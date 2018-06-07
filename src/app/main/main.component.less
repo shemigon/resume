@@ -10,16 +10,14 @@
     width: @width;
 
     aside {
-      width: 30%;
+      position: fixed;
     }
     main {
-      width: 70%;
+      margin-left: .3 * @width + 3 * @blockSize;
+      width: .7 * @width;
 
     }
     aside, main {
-      display: inline-block;
-      vertical-align: top;
-
       section {
         background: white;
         border-radius: @blockSize/3;
