@@ -1,0 +1,30 @@
+@import "../constants.less";
+
+.list {
+  margin-top: @blockSize;
+  margin-left: 2.2rem;
+  margin-right: @blockSize;
+
+  padding-top: @blockSize;
+  padding-bottom: @blockSize;
+
+  border-bottom: 1px solid black;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-left: 2*@blockSize;
+
+    li {
+      padding: @blockSize/2 0;
+    }
+  }
+}

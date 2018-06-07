@@ -1,8 +1,16 @@
-<section>
-  <h1>Past experience</h1>
+<h1>
+  <i class="material-icons">
+    notes
+  </i>
+  Past experience
+</h1>
+
+<div class="content">
   <p>{{ info.foreword }}</p>
+
   <ul>
     <li *ngFor="let item of info.achievements">{{ item }}</li>
   </ul>
+
   <p *ngIf="info.afterword">{{ info.afterword }}</p>
-</section>
+</div>

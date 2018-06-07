@@ -1,0 +1,18 @@
+@import "../constants.less";
+
+.content {
+  margin-left: 2.2rem;
+
+  ul {
+    list-style-type: disc;
+    padding-left: 2 * @blockSize;
+
+    li {
+      padding-bottom: 2 * @blockSize;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}

@@ -8,7 +8,6 @@
 
   #wrapper {
     width: @width;
-    //padding: .6rem;
 
     aside {
       width: 30%;
@@ -23,9 +22,10 @@
 
       section {
         background: white;
-        border-radius: .2rem;
-        box-shadow: 0 0 .3rem darken(@backgroundColor, 15%);
+        border-radius: @blockSize/3;
+        box-shadow: 0 0 @blockSize/2 darken(@backgroundColor, 15%);
         margin: .6rem;
+        padding: @blockSize;
       }
     }
   }
