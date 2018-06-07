@@ -2,6 +2,8 @@ export class PersonalInfo {
   name: string;
   email: string;
   phone: string;
+  title: string;
+  address: string;
 }
 
 export class SummaryItem {

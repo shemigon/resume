@@ -1,0 +1,32 @@
+@import "../constants.less";
+
+:host {
+  display: flex;
+  justify-content: center;
+
+  background-color: @backgroundColor;
+
+  #wrapper {
+    width: @width;
+    //padding: .6rem;
+
+    aside {
+      width: 30%;
+    }
+    main {
+      width: 70%;
+
+    }
+    aside, main {
+      display: inline-block;
+      vertical-align: top;
+
+      section {
+        background: white;
+        border-radius: .2rem;
+        box-shadow: 0 0 .3rem darken(@backgroundColor, 15%);
+        margin: .6rem;
+      }
+    }
+  }
+}

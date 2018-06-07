@@ -1,8 +1,10 @@
 {
   "personalInfo": {
     "name": "Boris Shemigon",
+    "title": "Lead Developer / Architect",
     "email": "i@boris.co",
-    "phone": "(305) 570-5427"
+    "phone": "(305) 570-5427",
+    "address": "Coral Springs, FL"
   },
   "summary": [
     {

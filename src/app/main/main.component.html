@@ -1,8 +1,31 @@
-<div class="container">
-  <resume-header [resume]="resume"></resume-header>
-  <resume-summary [resume]="resume"></resume-summary>
-  <resume-specialties [resume]="resume"></resume-specialties>
-  <resume-jobs [resume]="resume"></resume-jobs>
-  <resume-pastexp [resume]="resume"></resume-pastexp>
-  <resume-education [resume]="resume"></resume-education>
+<div id="wrapper">
+  <aside>
+    <section>
+      <resume-personal-info [resume]="resume"></resume-personal-info>
+    </section>
+  </aside>
+
+  <main>
+
+    <section>
+      <resume-summary [resume]="resume"></resume-summary>
+    </section>
+
+    <section>
+      <resume-specialties [resume]="resume"></resume-specialties>
+    </section>
+
+    <section>
+      <resume-jobs [resume]="resume"></resume-jobs>
+    </section>
+
+    <section>
+      <resume-pastexp [resume]="resume"></resume-pastexp>
+    </section>
+
+    <section>
+      <resume-education [resume]="resume"></resume-education>
+    </section>
+
+  </main>
 </div>

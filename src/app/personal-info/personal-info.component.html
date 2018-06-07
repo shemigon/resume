@@ -1,0 +1,25 @@
+<div class="inner">
+  <div class="photo">
+    <img gravatar [email]="info.email" [size]="240" [fallback]="'wavatar'">
+  </div>
+
+  <div class="info b">
+    <div class="name">{{ info.name }}</div>
+    <div class="title">{{ info.title }}</div>
+  </div>
+
+  <div class="email b">
+    <i class="material-icons">email</i>
+    {{ info.email }}
+  </div>
+
+  <div class="phone b">
+    <i class="material-icons">phone</i>
+    {{ info.phone }}
+  </div>
+
+  <div class="address">
+    <i class="material-icons">home</i>
+    {{ info.address }}
+  </div>
+</div>
