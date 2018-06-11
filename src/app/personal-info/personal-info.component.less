@@ -1,37 +1,42 @@
 @import "../constants.less";
 
-.material-icons {
-  vertical-align: text-bottom;
-  font-size: 2 * @blockSize;
-}
+header {
+  clear: left;
 
-:host {
+  .material-icons {
+    vertical-align: text-bottom;
+    font-size: 2 * @blockSize;
+  }
+
   > div {
-    padding: 2*@blockSize 0;
-    vertical-align: middle;
-
-    &.b {
-      border-bottom: 1px solid black;
-    }
-
-    i {
-      margin-right: @blockSize;
-    }
+    vertical-align: top;
   }
 
   .photo {
-    padding: 0;
-    img {
-      width: 100%;
+    filter: grayscale(100%);
+    float: left;
+  }
+  .text {
+    @c1: 165;
+    @c2: 14;
+    background: rgb(@c1, @c1, @c1);
+    background: linear-gradient(90deg, rgba(@c1, @c1, @c1, 1) 0%, rgba(@c2, @c2, @c2, 1) 100%);
+    color: white;
+    width: 100%;
+    padding-left: 10em;
+    margin-left: @profilePictureWidth;
+    height: @profilePictureWidth;
+
+    .name {
+      font-size: 200%;
+      padding-top: 1em;
+      text-transform: uppercase;
+    }
+
+    .contacts {
+      margin-top: 1em;
     }
   }
-
-  .name {
-    font-size: 167%;
-    padding-bottom: @blockSize;
-  }
-
-  .title {
-    padding-top: @blockSize;
-  }
 }
+
+

@@ -1,31 +1,25 @@
-<div id="wrapper">
-  <aside>
-    <section>
-      <resume-personal-info [info]="resume.personalInfo"></resume-personal-info>
-    </section>
-  </aside>
+<resume-personal-info [info]="resume.personalInfo"></resume-personal-info>
 
-  <main>
+<main>
 
-    <section *ngIf="resume.summary">
-      <resume-summary [summary]="resume.summary"></resume-summary>
-    </section>
+  <section *ngIf="resume.summary">
+    <resume-summary [summary]="resume.summary"></resume-summary>
+  </section>
 
-    <section *ngIf="resume.specialties">
-      <resume-specialties [items]="resume.specialties"></resume-specialties>
-    </section>
+  <section *ngIf="resume.specialties">
+    <resume-specialties [items]="resume.specialties"></resume-specialties>
+  </section>
 
-    <section *ngIf="resume.jobs">
-      <resume-jobs [items]="resume.jobs"></resume-jobs>
-    </section>
+  <section *ngIf="resume.jobs">
+    <resume-jobs [items]="resume.jobs"></resume-jobs>
+  </section>
 
-    <section *ngIf="resume.pastExperience">
-      <resume-pastexp [info]="resume.pastExperience"></resume-pastexp>
-    </section>
+  <section *ngIf="resume.pastExperience">
+    <resume-pastexp [info]="resume.pastExperience"></resume-pastexp>
+  </section>
 
-    <section *ngIf="resume.education">
-      <resume-education [items]="resume.education"></resume-education>
-    </section>
+  <section *ngIf="resume.education">
+    <resume-education [items]="resume.education"></resume-education>
+  </section>
 
-  </main>
-</div>
+</main>

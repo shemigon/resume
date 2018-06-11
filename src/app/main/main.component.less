@@ -3,43 +3,18 @@
 @width: 50rem;
 @backgroundColor: #E9E8E6;
 
-:host {
-  display: flex;
-  justify-content: center;
+main {
+  margin-left: .3 * @width + 3 * @blockSize;
+  width: .7 * @width;
+}
 
-  background-color: @backgroundColor;
 
-  #wrapper {
-    width: @width;
-
-    aside {
-      position: fixed;
-    }
-
-    main {
-      margin-left: .3 * @width + 3 * @blockSize;
-      width: .7 * @width;
-    }
-
-    @media (max-width: @width) {
-      aside {
-        position: inherit;
-      }
-
-      main {
-        margin-left: 0;
-        width: 100%;
-      }
-    }
-
-    aside, main {
-      section {
-        background: white;
-        border-radius: @blockSize/3;
-        box-shadow: 0 0 @blockSize/2 darken(@backgroundColor, 15%);
-        margin: @blockSize;
-        padding: @blockSize;
-      }
-    }
+main {
+  section {
+    background: white;
+    border-radius: @blockSize/3;
+    box-shadow: 0 0 @blockSize/2 darken(@backgroundColor, 15%);
+    margin: @blockSize;
+    padding: @blockSize;
   }
 }
